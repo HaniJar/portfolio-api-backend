@@ -15,4 +15,4 @@ app.use("/testimonials", testimonialRoutes);
 app.use("/contacts", contactRoutes);
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`listeing to ${port}`));
+app.listen(port, () => console.log(`listening to ${port}`));

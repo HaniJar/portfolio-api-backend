@@ -4,11 +4,12 @@ const nodemailer = require("nodemailer");
 const app = express.Router();
 
 app.post("/", (req, res) => {
+  let { name, email, message } = req.body;
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: "hanijar2209@gmail.com",
-      pass: "nodejs123",
+      pass: "nodejs1230",
     },
   });
 
@@ -16,7 +17,11 @@ app.post("/", (req, res) => {
     from: email,
     to: "hanijar2209@gmail.com",
     subject: "new contact from your portfolio",
-    text: `${name} has contacted you`,
+    text: `${name} has contacted you
+    
+    please contact them back on ${email}
+    
+    ${message}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
