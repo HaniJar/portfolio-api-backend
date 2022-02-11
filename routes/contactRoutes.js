@@ -1,5 +1,6 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const app = express.Router();
 
@@ -7,9 +8,12 @@ app.post("/", (req, res) => {
   let { name, mail, msg } = req.body;
   const transporter = nodemailer.createTransport({
     service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: "hanijar2209@gmail.com",
-      pass: "nodejs1230",
+      user: process.env.USER,
+      pass: process.env.PASS,
     },
   });
 
@@ -24,7 +28,7 @@ app.post("/", (req, res) => {
     ${msg}`,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
       res.status(400).send({ msg: "email not sent" });
@@ -34,5 +38,6 @@ app.post("/", (req, res) => {
     }
   });
 });
+//haniah-api.herokuapp.com/
 
-module.exports = app;
+https: module.exports = app;
