@@ -7,6 +7,7 @@ let projects = [
     id: 1,
     title: "WriteRight",
     image: "https://i.postimg.cc/Y2m9MSQp/Write-Right.png",
+    description: "My very first website I made at Lifechoices",
     netlify: "https://quizzical-jackson-2415e7.netlify.app/",
     github: "https://github.com/HaniJar/My-Portfolio",
   },
@@ -14,6 +15,7 @@ let projects = [
     id: 2,
     title: "Team-Task",
     image: "https://i.postimg.cc/XYFN615Q/Team-Task.png",
+    description: "A team project we worked on with HTML and CSS",
     netlify: "https://quirky-leakey-9c061c.netlify.app/",
     github: "https://github.com/HaniJar/Team-Task",
   },
@@ -21,6 +23,7 @@ let projects = [
     id: 3,
     title: "E-commerce Website",
     image: "https://i.postimg.cc/65Zx82QQ/e-commerce.png",
+    description: "E-commerce site made with Bootstrap",
     netlify: "https://agitated-edison-a8217c.netlify.app/",
     github: "https://github.com/HaniJar/New-Project",
   },
@@ -28,6 +31,7 @@ let projects = [
     id: 4,
     title: "JavaScript Calculator",
     image: "https://i.postimg.cc/9FHCttK9/JS-Calc.png",
+    description: "Calculator made with Javascript",
     netlify: "https://reverent-bartik-231cc6.netlify.app/",
     github: "https://github.com/HaniJar/JavaScript-Project",
   },
@@ -35,6 +39,7 @@ let projects = [
     id: 5,
     title: "Point Of Sale",
     image: "https://i.postimg.cc/tgwLR9H6/POS.png",
+    description: "My first Point of Sale made with Javascript",
     netlify: "https://hopeful-feynman-653872.netlify.app/",
     github: "https://github.com/HaniJar/POS-Project",
   },
@@ -54,13 +59,14 @@ app.get("/:id", (req, res) => {
 
 //  create a project (push to array)
 app.post("/", (req, res) => {
-  let { title, image, netlify, github } = req.body;
-  if (!title || !image || !netlify || !github)
+  let { title, image, description, netlify, github } = req.body;
+  if (!title || !image || !description || !netlify || !github)
     res.status(400).send({ msg: "not all information sent" });
   let newProject = {
     id: projects.length + 1,
     title,
     image,
+    description,
     netlify,
     github,
   };
@@ -75,11 +81,12 @@ app.put("/:id", (req, res) => {
   // if no project found, send error
   if (!project) res.status(404).send({ msg: "project not found" });
   // get data from request body
-  let { title, image, netlify, github } = req.body;
+  let { title, image, description, netlify, github } = req.body;
 
   // write details to project
   if (title) project.title = title;
   if (image) project.image = image;
+  if (description) project.description = description;
   if (netlify) project.netlify = netlify;
   if (github) project.github = github;
   // send updated project
