@@ -15,7 +15,7 @@ let projects = [
     id: 2,
     title: "Team-Task",
     image: "https://i.postimg.cc/XYFN615Q/Team-Task.png",
-    description: "A team project we worked on with HTML and CSS",
+    description: "HTML and CSS team project",
     netlify: "https://quirky-leakey-9c061c.netlify.app/",
     github: "https://github.com/HaniJar/Team-Task",
   },
