@@ -34,7 +34,7 @@ let testimonials = [
     name: "Na-aim Fredericks",
     image: "https://i.postimg.cc/9fYLQZJN/na-aim.jpg",
     paragraph:
-      "Haniah is a very enthusiastic person who strives to do her best in any and every aspect of her projects that comes her way.",
+      "Haniah is a very enthusiastic person who strives to do her best in any and every aspect of her projects that comes her way",
   },
   {
     id: 6,
