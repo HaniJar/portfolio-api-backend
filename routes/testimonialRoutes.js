@@ -7,21 +7,41 @@ let testimonials = [
     id: 1,
     name: "Craig Braaf",
     image: "https://i.postimg.cc/hjqv4s31/craig.png",
-    paragraph:
-      " Very bright person. She knows when to play hard and work hard.",
+    paragraph: " Very bright person. She knows when to play hard and work hard",
   },
   {
     id: 2,
     name: "Tursha Arendse",
     image: "https://i.postimg.cc/y8jC3PdT/tursha-1.png",
-    paragraph: " Haniah is a very hard working and determined young women.",
+    paragraph: " Haniah is a very hard working and determined young women",
   },
   {
     id: 3,
     name: "Lilitha Ngele",
     image: "https://i.postimg.cc/qB6rDybk/lilly-1.jpg",
     paragraph:
-      " Haniah is very a good lady who works very hard to get what she wants.",
+      " Haniah is very a good lady who works very hard to get what she wants",
+  },
+  {
+    id: 4,
+    name: "Muneeb Davids",
+    image: "https://i.postimg.cc/RVQrH6sK/muneeb.png",
+    paragraph:
+      "Haniah is a team player together with good communicational skills",
+  },
+  {
+    id: 5,
+    name: "Na-aim Fredericks",
+    image: "https://i.postimg.cc/9fYLQZJN/na-aim.jpg",
+    paragraph:
+      "Haniah is a very enthusiastic person who strives to do her best in any and every aspect of her projects that comes her way.",
+  },
+  {
+    id: 6,
+    name: "Kyle Mc Bryne",
+    image: "https://i.postimg.cc/3JqW4qdP/kyle.png",
+    paragraph:
+      "Haniah is a cheerful person, always a pleasure to work with being a team player and a great problem solver",
   },
 ];
 
